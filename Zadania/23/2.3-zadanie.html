@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -101,7 +102,8 @@ git push origin main</div>
             
             /* --- TWÓJ KOD TUTAJ --- */
             
-            
+            localStorage.setItem('zapisaneImie', inputImie.value);
+            pokazEkran();
             
         });
 
@@ -112,6 +114,8 @@ git push origin main</div>
             
             /* --- TWÓJ KOD TUTAJ --- */
             
+            localStorage.removeItem( 'zapisaneImie' );
+            pokazEkran();
             
         });
 
