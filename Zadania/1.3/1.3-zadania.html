@@ -54,21 +54,31 @@
         // --- ZADANIE 1 ---
         /* --- TWÓJ KOD TUTAJ --- */
         
-        
+            let kolory = [
+        "żółty",
+        "różowy",
+        "fioletowy"
+        ];
+
+        let drugiKolor = kolory[ 1 ];
 
 
         // --- ZADANIE 2 ---
         /* --- TWÓJ KOD TUTAJ --- */
         
-        
+        kolory.push( "czerwony" )[kolory.length + 1];
 
 
         // --- ZADANIE 3 ---
-        let tekstZPetli = "";
+    
         /* --- TWÓJ KOD TUTAJ (Pętla for) --- */
         // Wskazówka: W pętli rób: tekstZPetli = tekstZPetli + "Krok "; lub tekstZPetli += "Krok ";
 
-        
+        let tekstZPetli = "";
+        let kroki = 5; 
+        for( let i = 0; kroki > i; i++ ) {
+            tekstZPetli = tekstZPetli + "Krok ";
+        }
 
 
         // --- ZADANIE 4 ---
@@ -76,6 +86,9 @@
         let sumaOcen = 0;
         
         /* --- TWÓJ KOD TUTAJ --- */
+         for(let i =0; oceny.length > i; i++ ) {
+            sumaOcen = oceny[ i ] + sumaOcen;
+        }
         
         
 
