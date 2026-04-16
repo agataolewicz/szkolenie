@@ -56,6 +56,8 @@
         // const guzik = ...
         // const kwadrat = ...
         
+        const guzik = document.getElementById("magiczny-guzik");
+        const kwadrat = document.getElementById("kwadrat-zadanie")
 
 
 
@@ -63,7 +65,11 @@
         // Użyj: guzik.addEventListener("click", () => { ... })
         /* --- TWÓJ KOD TUTAJ --- */
         
-        
+        guzik.addEventListener("click", () => {
+            kwadrat.style.width = "300px";
+            kwadrat.innerText = "Duży!";
+        })
+
 
 
 
@@ -78,6 +84,14 @@
         
         // inputHaslo.addEventListener("input", (zdarzenie) => { ... });
 
+        const inputHaslo = document.getElementById("haslo-input");
+        const wiadomosc = document.getElementById("tajna-wiadomosc");
+
+        inputHaslo.addEventListener("input", () => {
+            if(inputHaslo.value = "sekret") {
+                wiadomosc.style.display = "block";
+            }
+        });
 
 
 
