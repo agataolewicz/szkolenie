@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -64,6 +65,7 @@ git push origin main</div>
 
         // ==========================================
         // MIEJSCE NA TWÓJ KOD
+
         // ==========================================
 
         formularzPosta.addEventListener('submit', async (zdarzenie) => {
@@ -76,13 +78,16 @@ git push origin main</div>
             /* --- TWÓJ KOD TUTAJ --- */
             // const tytul = ...
             // const tresc = ...
-            
+            const tytul = document.getElementById('tytul').value
+            const tresc = document.getElementById('tresc').value
 
             // 3. Zbuduj obiekt o nazwie np. 'nowyPost'.
             // Niech ma właściwości: 'title', 'body' oraz 'userId' (ustaw userId po prostu na liczbę 1).
             /* --- TWÓJ KOD TUTAJ --- */
-            
-            
+            const nowyPost =
+            {
+            title: tytul, body: tresc, userId: 1
+            }
 
             ekranWyniku.innerHTML = "Wysyłanie do serwera...";
 
@@ -94,6 +99,15 @@ git push origin main</div>
                 
                 /* --- TWÓJ KOD TUTAJ --- */
                 // const odpowiedz = await fetch( ... );
+                const odpowiedz = await fetch ('https://jsonplaceholder.typicode.com/posts')
+                {
+                    method: 'POST'
+                    body: JSON.stringify(nowyPost)
+                    headers:{ 'Content-Type' ; 'application/json'}}
+                    if (!odpowiedz.ok) throw new Error("Błąd serwera")
+
+                    const zapisanyPost = await odpowiedz.json()
+                    ekranWyniku.innerHTML = "Dodano! ID posta to: " + zapisanyPost.id
                 
                 
 
